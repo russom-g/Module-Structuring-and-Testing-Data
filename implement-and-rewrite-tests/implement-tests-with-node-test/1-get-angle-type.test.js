@@ -10,3 +10,8 @@ test("Classifies right angles", () => {
   const right = getAngleType(90);
   assert.equal(right, "Right angle");
 });
+
+test("Classifies Acute angles", () => {
+  const Acute = getAngleType(90);
+  assert.equal(Acute, "Acute angle");
+});
