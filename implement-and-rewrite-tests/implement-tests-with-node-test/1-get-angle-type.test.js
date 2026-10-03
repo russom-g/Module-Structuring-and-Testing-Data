@@ -17,7 +17,21 @@ test("Classifies right angles", () => {
 });
 
 test("Classifies Obtuse angles", () => {
-  const Obtuse = getAngleType(89);
+  const Obtuse = getAngleType(99);
   assert.equal(Obtuse, "Obtuse angle");
 });
 
+test("Classifies Straight angles", () => {
+  const Straight = getAngleType(180);
+  assert.equal(Straight, "Straight angle");
+});
+
+test("Classifies Reflex angles", () => {
+  const Reflex = getAngleType(181);
+  assert.equal(Reflex, "Reflex angle");
+});
+
+test("Classifies Invalid angles", () => {
+  const Invalid = getAngleType(399);
+  assert.equal(Invalid, "Invalid angle");
+});
