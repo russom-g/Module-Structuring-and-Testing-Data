@@ -18,13 +18,19 @@ test("Classifies Acute angles", () => {
 });
 
 test("Classifies right angles", () => {
-  const right = getAngleType(90, );
+  const right = getAngleType(90);
   assert.equal(right, "Right angle");
 });
 
 test("Classifies Obtuse angles", () => {
-  const Obtuse = getAngleType(99);
+  const Obtuse = getAngleType(91);
   assert.equal(Obtuse, "Obtuse angle");
+
+  const Obtuse1 = getAngleType(120);
+  assert.equal(Obtuse1, "Obtuse angle");
+
+  const Obtuse2 = getAngleType(179);
+  assert.equal(Obtuse2, "Obtuse angle");
 });
 
 test("Classifies Straight angles", () => {
@@ -35,9 +41,27 @@ test("Classifies Straight angles", () => {
 test("Classifies Reflex angles", () => {
   const Reflex = getAngleType(181);
   assert.equal(Reflex, "Reflex angle");
+
+   const Reflex1 = getAngleType(299);
+   assert.equal(Reflex1, "Reflex angle");
+
+    const Reflex2 = getAngleType(360);
+    assert.equal(Reflex2, "Reflex angle");
 });
 
 test("Classifies Invalid angles", () => {
-  const Invalid = getAngleType(399);
+  const Invalid = getAngleType(0);
   assert.equal(Invalid, "Invalid angle");
+
+  const Invalid1 = getAngleType(361);
+  assert.equal(Invalid1, "Invalid angle");
+
+  const Invalid2 = getAngleType(399);
+  assert.equal(Invalid2, "Invalid angle");
+
+   const Invalid3 = getAngleType(-7);
+   assert.equal(Invalid3, "Invalid angle");
+
+    const Invalid4 = getAngleType(30.2);
+    assert.equal(Invalid4, "Invalid angle");
 });
