@@ -29,7 +29,6 @@ export function getAngleType(angle) {
   } else if (angle > 180 && angle < 360) {
     return "Reflex angle";
   } else {
-    return "Invalid angle"
+    return "Invalid angle";
   }
-
 }
