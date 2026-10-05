@@ -42,11 +42,11 @@ test("Classifies Reflex angles", () => {
   const Reflex = getAngleType(181);
   assert.equal(Reflex, "Reflex angle");
 
-   const Reflex1 = getAngleType(299);
-   assert.equal(Reflex1, "Reflex angle");
+  const Reflex1 = getAngleType(299);
+  assert.equal(Reflex1, "Reflex angle");
 
-    const Reflex2 = getAngleType(360);
-    assert.equal(Reflex2, "Reflex angle");
+  const Reflex2 = getAngleType(360);
+  assert.equal(Reflex2, "Reflex angle");
 });
 
 test("Classifies Invalid angles", () => {
@@ -59,9 +59,9 @@ test("Classifies Invalid angles", () => {
   const Invalid2 = getAngleType(399);
   assert.equal(Invalid2, "Invalid angle");
 
-   const Invalid3 = getAngleType(-7);
-   assert.equal(Invalid3, "Invalid angle");
+  const Invalid3 = getAngleType(-7);
+  assert.equal(Invalid3, "Invalid angle");
 
-    const Invalid4 = getAngleType(30.2);
-    assert.equal(Invalid4, "Invalid angle");
+  const Invalid4 = getAngleType(30.2);
+  assert.equal(Invalid4, "Invalid angle");
 });
