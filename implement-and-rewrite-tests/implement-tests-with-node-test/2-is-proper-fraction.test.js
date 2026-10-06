@@ -42,11 +42,11 @@ test("Decimal improper fraction", () => {
   assert.equal(isProperFraction(1.2, 1.1), false);
 });
 
-test("Numerator larger improper fraction", () => {
+test("Large numerator  improper fraction", () => {
   assert.equal(isProperFraction(5, 3), false);
 });
 
-test("Both equal improper fraction", () => {
+test("Both number equal improper fraction", () => {
   assert.equal(isProperFraction(4, 4), false);
 });
 
@@ -54,7 +54,7 @@ test("0 denominator improper fraction", () => {
   assert.equal(isProperFraction(7, 0), false);
 });
 
-test("Both 0 improper fraction", () => {
+test("Both numbers 0 improper fraction", () => {
   assert.equal(isProperFraction(0, 0), false);
 });
 
