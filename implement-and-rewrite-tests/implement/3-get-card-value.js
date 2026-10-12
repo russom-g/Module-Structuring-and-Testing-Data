@@ -25,11 +25,20 @@
 
 export function getCardValue(card) {
   // TODO: Implement this function
-  if (card === "A") {
-    return 11;
-  } else if (card === "J" || card === "Q" || card === "K") {
-    return 10;
-  } else {
-    return Number(card);
+  if (typeof card !== "string") {
+    throw new Error("Invalid");
   }
+  const rank = card.slice(0, -1);
+
+  if (rank === "A") {
+    return 11;
+  }
+  if (rank === "J" || rank === "Q" || rank === "K") {
+    return 10;
+  }
+  const value = Number(rank);
+  if (Number.isInteger(value) && value >= 2 && value <= 10) {
+    return value;
+  }
+  throw new Error(`Expected a number followed by a suit, but got "${card}"`);
 }
