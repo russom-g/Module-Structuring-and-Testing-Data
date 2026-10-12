@@ -42,7 +42,7 @@ test("Decimal improper fraction", () => {
   assert.equal(isProperFraction(1.2, 1.1), false);
 });
 
-test("Large numerator  improper fraction", () => {
+test("Large numerator improper fraction", () => {
   assert.equal(isProperFraction(5, 3), false);
 });
 
