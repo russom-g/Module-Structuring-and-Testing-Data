@@ -38,3 +38,15 @@ test("Arbitrary non-card string", () => {
   );
 });
 // TODO: What other invalid card cases can you think of?
+
+test("Invalid cards", () => {
+  assert.throws(() => getCardValue(""), "invalid");
+  assert.throws(() => getCardValue("♠"), "invalid");
+  assert.throws(() => getCardValue("A"), "invalid");
+  assert.throws(() => getCardValue("5"), "invalid");
+  assert.throws(() => getCardValue("1♠"), "invalid");
+  assert.throws(() => getCardValue("0♠"), "invalid");
+  assert.throws(() => getCardValue("11♠"), "invalid");
+  assert.throws(() => getCardValue("X♠"), "invalid");
+  assert.throws(() => getCardValue("5♠♥"), "invalid");
+});
