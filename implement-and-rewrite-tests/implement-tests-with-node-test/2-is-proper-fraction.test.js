@@ -24,7 +24,7 @@ test("Negative numerator proper fraction", () => {
   assert.equal(isProperFraction(-9, 1), true);
 });
 
-test("Both negatives proper fraction", () => {
+test("Both negative proper fraction", () => {
   assert.equal(isProperFraction(-7, -3), true);
 });
 
@@ -46,7 +46,7 @@ test("Large numerator improper fraction", () => {
   assert.equal(isProperFraction(5, 3), false);
 });
 
-test("Both number equal improper fraction", () => {
+test("Equal numbers improper fraction", () => {
   assert.equal(isProperFraction(4, 4), false);
 });
 
@@ -58,7 +58,7 @@ test("Both numbers 0 improper fraction", () => {
   assert.equal(isProperFraction(0, 0), false);
 });
 
-test("Both equal negatives improper fraction", () => {
+test("Negative numbers improper fraction", () => {
   assert.equal(isProperFraction(-4, -4), false);
 });
 
