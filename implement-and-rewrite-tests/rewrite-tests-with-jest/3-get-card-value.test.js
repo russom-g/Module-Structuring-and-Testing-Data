@@ -44,6 +44,29 @@ test(`Should return 10 when given number 10 card`, () => {
   expect(getCardValue("10♦")).toEqual(10);
 });
 
+// Case 3: Face Cards (J, Q, K)
+test(`Should return 10 when given a Kings card`, () => {
+  expect(getCardValue("K♠")).toEqual(10);
+});
+
+test(`Should return 10 when given a Queen card`, () => {
+  expect(getCardValue("Q♦")).toEqual(10);
+});
+
+test(`Should return "Invalid" when given invalid cards card`, () => {
+  expect(() => getCardValue("")).toThrow();
+  expect(() => getCardValue("♠")).toThrow();
+  expect(() => getCardValue("A")).toThrow();
+  expect(() => getCardValue("5")).toThrow();
+  expect(() => getCardValue("1♠")).toThrow();
+  expect(() => getCardValue("0♠")).toThrow();
+  expect(() => getCardValue("11♠")).toThrow();
+  expect(() => getCardValue("X♠")).toThrow();
+  expect(() => getCardValue("5♠♥")).toThrow();
+});
+
+// Case 4: Invalid Cards
+
 // Suggestion: Group the remaining test data into these categories:
 //   Number Cards (2-10)
 //   Face Cards (J, Q, K)
