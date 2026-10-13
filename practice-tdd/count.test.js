@@ -23,7 +23,7 @@ test("should count multiple occurrences of a character", () => {
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of `char` were found.
 
-test("should count multiple occurrences of a character", () => {
+test("should return 0 for a character with no occurrences", () => {
   const str = "aaaaa";
   const char = "b";
   const count = countChar(str, char);
