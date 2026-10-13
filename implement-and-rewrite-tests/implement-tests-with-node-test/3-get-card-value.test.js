@@ -17,7 +17,7 @@ test("Valid Queen card", () => {
   assert.equal(getCardValue("Q♣"), 10);
 });
 
-test("Valid single-digit card", () => {
+test("Valid King card", () => {
   assert.equal(getCardValue("K♦"), 10);
 });
 
