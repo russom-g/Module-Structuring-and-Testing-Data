@@ -46,11 +46,10 @@ test("should append 'nd' for numbers ending with 3, except those ending with 13"
   expect(getOrdinalNumber(133)).toEqual("133rd");
 });
 
-// Case 5: All numbers (but not 1, 2, and 3)
-// When the number ends with any number, except those ending with 1, 2, and 3,
+// Case 5: Exception for teen numbers ending with 1, 2, or 3.
+// When the teen number ends with 1, 2, or 3,
 // Then the function should return a string by appending "th" to the number.
-test("should append 'th' for numbers ending with any number, except those ending with 1, 2, and 3", () => {
-  expect(getOrdinalNumber(10)).toEqual("10th");
+test("should append 'th' for teen numbers ending with 1, 2, or 3,", () => {
   expect(getOrdinalNumber(11)).toEqual("11th");
   expect(getOrdinalNumber(12)).toEqual("12th");
   expect(getOrdinalNumber(13)).toEqual("13th");
