@@ -25,4 +25,11 @@
 
 export function getCardValue(card) {
   // TODO: Implement this function
+  if (card === "A") {
+    return 11;
+  } else if (card === "J" || card === "Q" || card === "K") {
+    return 10;
+  } else {
+    return Number(card);
+  }
 }
