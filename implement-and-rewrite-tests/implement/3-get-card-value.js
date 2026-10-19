@@ -29,15 +29,25 @@ export function getCardValue(card) {
     throw new Error("Invalid");
   }
   const rank = card.slice(0, -1);
+  const suits = card.slice(-1);
+  const validSuits = ["♠", "♥", "♦", "♣"];
 
-  if (rank === "A") {
+  if (rank === "A" && validSuits.includes(suits)) {
     return 11;
   }
-  if (rank === "J" || rank === "Q" || rank === "K") {
+  if (
+    (rank === "J" || rank === "Q" || rank === "K") &&
+    validSuits.includes(suits)
+  ) {
     return 10;
   }
   const value = Number(rank);
-  if (Number.isInteger(value) && value >= 2 && value <= 10) {
+  if (
+    Number.isInteger(value) &&
+    value >= 2 &&
+    value <= 10 &&
+    validSuits.includes(suits)
+  ) {
     return value;
   }
   throw new Error(`Expected a number followed by a suit, but got "${card}"`);
