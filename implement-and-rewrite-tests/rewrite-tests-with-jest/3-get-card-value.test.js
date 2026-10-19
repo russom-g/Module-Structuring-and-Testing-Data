@@ -37,6 +37,7 @@ test(`Should return "Invalid" when given an invalid card`, () => {
   expect(() => getCardValue("1♠")).toThrow();
   expect(() => getCardValue("0♠")).toThrow();
   expect(() => getCardValue("11♠")).toThrow();
+  expect(() => getCardValue("AA")).toThrow();
   expect(() => getCardValue("X♠")).toThrow();
   expect(() => getCardValue("5♠♥")).toThrow();
 });
