@@ -66,6 +66,7 @@ test("Invalid cards", () => {
   assert.throws(() => getCardValue("5"), "invalid");
   assert.throws(() => getCardValue("1♠"), "invalid");
   assert.throws(() => getCardValue("0♠"), "invalid");
+  assert.throws(() => getCardValue("AA"), "invalid");
   assert.throws(() => getCardValue("11♠"), "invalid");
   assert.throws(() => getCardValue("X♠"), "invalid");
   assert.throws(() => getCardValue("5♠♥"), "invalid");
