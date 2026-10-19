@@ -45,7 +45,7 @@ test("Classifies Reflex angles", () => {
   const Reflex1 = getAngleType(299);
   assert.equal(Reflex1, "Reflex angle");
 
-  const Reflex2 = getAngleType(360);
+  const Reflex2 = getAngleType(359);
   assert.equal(Reflex2, "Reflex angle");
 });
 
