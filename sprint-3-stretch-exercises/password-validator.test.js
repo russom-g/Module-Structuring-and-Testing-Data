@@ -39,7 +39,6 @@ test("password has at least lowercase letter", () => {
   expect(result).toEqual(true);
 });
 
-/*
 // Have at least one number (0-9)
 test("password has at least one number (0-9)", () => {
   const password = "12Az9";
@@ -47,6 +46,7 @@ test("password has at least one number (0-9)", () => {
   expect(result).toEqual(true);
 });
 
+/*
 // Have at least one of the following non-alphanumeric symbols: ("!", "#", "$", "%", ".", "*", "&")
 test("password has at least non-alphanumeric symbols", () => {
   const password = "1Aaz9!";
