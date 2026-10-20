@@ -46,7 +46,6 @@ test("password has at least one number (0-9)", () => {
   expect(result).toEqual(true);
 });
 
-/*
 // Have at least one of the following non-alphanumeric symbols: ("!", "#", "$", "%", ".", "*", "&")
 test("password has at least non-alphanumeric symbols", () => {
   const password = "1Aaz9!";
@@ -54,6 +53,7 @@ test("password has at least non-alphanumeric symbols", () => {
   expect(result).toEqual(true);
 });
 
+/*
 //  Must not be any previous password in the passwords array. 
 test("password ust not be any previous password in the passwords array", () => {
   const password = "1234z";
