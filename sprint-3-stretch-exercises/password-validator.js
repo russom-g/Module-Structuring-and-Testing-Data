@@ -1,3 +1,9 @@
 export function isValidPassword(password) {
-  return password.length >= 5;
+
+  for( const char of password) {
+    if (char >= "A" && char <= "Z" || char >= 0 && char <= 9) {
+      return true;
+    }
+    return false;
+  }
 }
