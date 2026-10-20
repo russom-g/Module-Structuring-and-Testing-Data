@@ -32,8 +32,6 @@ test("password has at least uppercase letter", () => {
   expect(result).toEqual(true);
 });
 
-
-/*
 // Have at least one English lowercase letter (a-z)
 test("password has at least lowercase letter", () => {
   const password = "123Az";
@@ -41,6 +39,7 @@ test("password has at least lowercase letter", () => {
   expect(result).toEqual(true);
 });
 
+/*
 // Have at least one number (0-9)
 test("password has at least one number (0-9)", () => {
   const password = "12Az9";
