@@ -1,16 +1,17 @@
-export function isValidPassword(password) {
-  const symbols = ["!", "#", "$", "%", ".", "*", "&"];
-  const hasSymbol = password.includes(symbols);
-
-  for (const char of password) {
-    if (
-      (char >= "A" && char <= "Z") ||
-      (char >= "A" && char <= "Z") ||
-      (char >= 0 && char <= 9) ||
-      !hasSymbol
-    ) {
-      return true;
-    }
+export function isValidPassword(password, previousPasswords = []) {
+  if (previousPasswords.includes(password)) {
     return false;
   }
+  if (password.length < 5) {
+    return false;
+  }
+
+  for (const char of password) {
+    if (!/[A-Z]/.test(password)) return false;
+    if (!/[a-z]/.test(password)) return false;
+    if (!/[0-9]/.test(password)) return false;
+    if (!/[!#$%.*&]/.test(password)) return false;
+  }
+
+  return true;
 }
