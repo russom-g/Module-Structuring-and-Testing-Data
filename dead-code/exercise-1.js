@@ -4,3 +4,5 @@
 function sayHello(greeting, name) {
   return `${greeting}, ${name}!`;
 }
+
+console.log(sayHello("Hi", "Aman"));
