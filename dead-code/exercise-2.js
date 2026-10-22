@@ -1,7 +1,7 @@
 // Remove the unused code that does not contribute to the final console log
 // The countAndCapitalisePets function should continue to work for any reasonable input it's given, and you shouldn't modify the pets variable.
 
-//const pets = ["parrot", "hamster", "horse", "dog", "hamster", "cat", "hamster"];
+const pets = ["parrot", "hamster", "horse", "dog", "hamster", "cat", "hamster"];
 
 function countAndCapitalisePets(petsArr) {
   const petCount = {};
@@ -21,5 +21,4 @@ function countAndCapitalisePets(petsArr) {
   return petCount;
 }
 
-const animals = ["lion", "hyena", "elephant", "hippo", "tiger", "hippo"];
-console.log(countAndCapitalisePets(animals));
+console.log(countAndCapitalisePets(pets));
