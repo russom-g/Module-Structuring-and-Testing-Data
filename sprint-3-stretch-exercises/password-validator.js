@@ -12,6 +12,5 @@ export function isValidPassword(password, previousPasswords = []) {
     if (!/[0-9]/.test(password)) return false;
     if (!/[!#$%.*&]/.test(password)) return false;
   }
-
   return true;
 }
