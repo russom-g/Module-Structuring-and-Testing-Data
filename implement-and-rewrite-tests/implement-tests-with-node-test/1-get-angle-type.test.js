@@ -53,7 +53,7 @@ test("Classifies Invalid angles", () => {
   const Invalid = getAngleType(0);
   assert.equal(Invalid, "Invalid angle");
 
-  const Invalid1 = getAngleType(361);
+  const Invalid1 = getAngleType(360);
   assert.equal(Invalid1, "Invalid angle");
 
   const Invalid2 = getAngleType(399);
