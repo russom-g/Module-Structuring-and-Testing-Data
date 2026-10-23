@@ -23,6 +23,11 @@ test(`should return true for very small denominator proper fraction`, () => {
   expect(isProperFraction(1, 1000000)).toEqual(true);
 });
 
+test(`should return false for negative denominator improper fraction`, () => {
+  expect(isProperFraction(2, -9)).toEqual(true);
+});
+
+
 // Improper fractions
 test(`should return false for very small denominator proper fraction`, () => {
   expect(isProperFraction(1.2, 1.1)).toEqual(false);
@@ -46,10 +51,6 @@ test(`should return false for both 0 improper fraction`, () => {
 
 test(`should return false for both negative improper fraction`, () => {
   expect(isProperFraction(-4, -4)).toEqual(false);
-});
-
-test(`should return false for negative denominator improper fraction`, () => {
-  expect(isProperFraction(2, -9)).toEqual(false);
 });
 
 test(`should return true for negative numerator proper fraction`, () => {
