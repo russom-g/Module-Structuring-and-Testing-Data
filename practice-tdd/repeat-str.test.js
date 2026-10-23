@@ -38,6 +38,17 @@ test("should return an empty string", () => {
   expect(repeatedStr).toEqual("");
 });
 
+// Case: Handle empty string input:
+// Given a target empty string `str` and a `count` equal to 1,
+// When the repeatStr function is called with these inputs,
+// Then it should return an empty string.
+test("should return an empty string", () => {
+  const str = "";
+  const count = 1;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("");
+});
+
 // Case: Handle negative count:
 // Given a target string `str` and a negative integer `count`,
 // When the repeatStr function is called with these inputs,
