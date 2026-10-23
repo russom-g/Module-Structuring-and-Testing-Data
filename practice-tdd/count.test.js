@@ -32,7 +32,7 @@ test("should count multiple occurrences of a character", () => {
 
 test("should return 0 for a character with no occurrences", () => {
   const str = "aaaaa";
-  const char = "b";
+  const char = "";
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
