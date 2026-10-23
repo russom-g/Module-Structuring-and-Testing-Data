@@ -44,6 +44,9 @@ test("should append 'th' for numbers ending with 11, 12 and 13", () => {
   expect(getOrdinalNumber(11)).toEqual("11th");
   expect(getOrdinalNumber(12)).toEqual("12th");
   expect(getOrdinalNumber(13)).toEqual("13th");
+  expect(getOrdinalNumber(111)).toEqual("111th");
+  expect(getOrdinalNumber(112)).toEqual("112th");
+  expect(getOrdinalNumber(1113)).toEqual("1113th");
 });
 
 // Case 5: Numbers ending with 4 to 9.
