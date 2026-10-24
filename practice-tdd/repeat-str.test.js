@@ -58,3 +58,13 @@ test("should throw an error", () => {
   const count = -1;
   expect(() => repeatStr(str, count)).toThrow("Count must not be negative");
 });
+
+// Case: Handle negative count:
+// Given a target empty string `str` and a negative integer `count`,
+// When the repeatStr function is called with these inputs,
+// Then it should throw an error, as negative counts are not valid.
+test("should throw an error", () => {
+  const str = "";
+  const count = -1;
+  expect(() => repeatStr(str, count)).toThrow("Count must not be negative");
+});
